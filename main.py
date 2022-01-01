@@ -1,7 +1,7 @@
 import numpy as np
 
 
-input_data = np.array([1, 1, 0], [1, 4, 0], [3, 1, 0], [4, 5, 1], [0, 7, 1])
+input_data = np.array([[1, 1, 0], [1, 4, 0], [3, 1, 0], [4, 5, 1], [0, 7, 1]])
 data_number = input_data.shape[0]
 
 
