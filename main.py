@@ -37,12 +37,12 @@ for t in range(epochs):
         b0 = b0 + alpha * db0
         b1 = b1 + alpha * db1
         b2 = b2 + alpha * db2
-        plt.scatter(t, likelihood)
+        # plt.scatter(t, likelihood)
 x = np.linspace(0, 7, 100)
 y = - b0/b2 - b1/b2 * x
-# plt.plot(x, y)
+plt.plot(x, y)
 
-# for n in range(data_number):
-#     plt.scatter(input_data[n, 0], input_data[n, 1])
+for n in range(data_number):
+    plt.scatter(input_data[n, 0], input_data[n, 1])
     
 plt.show()
