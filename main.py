@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 input_data = np.array([[1, 1, 0], [1, 4, 0], [3, 1, 0], [4, 5, 1], [0, 7, 1]])
@@ -28,7 +29,14 @@ for t in range(epochs):
             db0 = db0 - sigmoid
             db1 = db1 - sigmoid * input_data[i, 0]
             db2 = db2 - sigmoid * input_data[i, 1]
+        b0 = b0 + alpha * db0
+        b1 = b1 + alpha * db1
+        b2 = b2 + alpha * db2
+x = np.linspace(0, 7, 100)
+y = - b0/b2 - b1/b2 * x
+plt.plot(x, y)
 
-b0 = b0 + alpha * db0
-b1 = b1 + alpha * db1
-b2 = b2 + alpha * db2
+for n in range(data_number):
+    plt.scatter(input_data[n, 0], input_data[n, 1])
+    
+plt.show()
